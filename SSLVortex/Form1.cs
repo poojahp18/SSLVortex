@@ -174,5 +174,11 @@ namespace SSLVortex
                 conn.runNonQuery(query);
             }
         }
+
+        private void showOutprocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form2();
+            frm.ShowDialog();
+        }
     }
 }
