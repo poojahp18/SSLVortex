@@ -35,10 +35,6 @@
             this.rdoDate = new System.Windows.Forms.RadioButton();
             this.rdoSID = new System.Windows.Forms.RadioButton();
             this.grpDate = new System.Windows.Forms.GroupBox();
-            this.grpWebsite = new System.Windows.Forms.GroupBox();
-            this.txtWebsite = new System.Windows.Forms.TextBox();
-            this.btnWebsiteGo = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.dtpEDate = new System.Windows.Forms.DateTimePicker();
             this.dtpSDate = new System.Windows.Forms.DateTimePicker();
             this.btnDateGo = new System.Windows.Forms.Button();
@@ -62,15 +58,19 @@
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpWebsite = new System.Windows.Forms.GroupBox();
+            this.txtWebsite = new System.Windows.Forms.TextBox();
+            this.btnWebsiteGo = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grpOptRep.SuspendLayout();
             this.grpDate.SuspendLayout();
-            this.grpWebsite.SuspendLayout();
             this.grpMonth.SuspendLayout();
             this.grpYear.SuspendLayout();
             this.grpSession.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpWebsite.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpOptRep
@@ -145,53 +145,17 @@
             // 
             // grpDate
             // 
-            this.grpDate.Controls.Add(this.grpWebsite);
             this.grpDate.Controls.Add(this.dtpEDate);
             this.grpDate.Controls.Add(this.dtpSDate);
             this.grpDate.Controls.Add(this.btnDateGo);
             this.grpDate.Controls.Add(this.label2);
             this.grpDate.Controls.Add(this.label1);
-            this.grpDate.Location = new System.Drawing.Point(0, 0);
+            this.grpDate.Location = new System.Drawing.Point(12, 85);
             this.grpDate.Name = "grpDate";
             this.grpDate.Size = new System.Drawing.Size(256, 153);
             this.grpDate.TabIndex = 1;
             this.grpDate.TabStop = false;
-            // 
-            // grpWebsite
-            // 
-            this.grpWebsite.Controls.Add(this.txtWebsite);
-            this.grpWebsite.Controls.Add(this.btnWebsiteGo);
-            this.grpWebsite.Controls.Add(this.label5);
-            this.grpWebsite.Location = new System.Drawing.Point(0, 0);
-            this.grpWebsite.Name = "grpWebsite";
-            this.grpWebsite.Size = new System.Drawing.Size(256, 153);
-            this.grpWebsite.TabIndex = 5;
-            this.grpWebsite.TabStop = false;
-            // 
-            // txtWebsite
-            // 
-            this.txtWebsite.Location = new System.Drawing.Point(9, 49);
-            this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.Size = new System.Drawing.Size(241, 20);
-            this.txtWebsite.TabIndex = 4;
-            // 
-            // btnWebsiteGo
-            // 
-            this.btnWebsiteGo.Location = new System.Drawing.Point(6, 113);
-            this.btnWebsiteGo.Name = "btnWebsiteGo";
-            this.btnWebsiteGo.Size = new System.Drawing.Size(244, 28);
-            this.btnWebsiteGo.TabIndex = 2;
-            this.btnWebsiteGo.Text = "Fetch";
-            this.btnWebsiteGo.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Website";
+            this.grpDate.Visible = false;
             // 
             // dtpEDate
             // 
@@ -202,6 +166,8 @@
             // 
             // dtpSDate
             // 
+            this.dtpSDate.CustomFormat = "dd-MM-yyyy";
+            this.dtpSDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSDate.Location = new System.Drawing.Point(6, 35);
             this.dtpSDate.Name = "dtpSDate";
             this.dtpSDate.Size = new System.Drawing.Size(244, 20);
@@ -216,6 +182,7 @@
             this.btnDateGo.TabIndex = 2;
             this.btnDateGo.Text = "Fetch";
             this.btnDateGo.UseVisualStyleBackColor = true;
+            this.btnDateGo.Click += new System.EventHandler(this.btnDateGo_Click);
             // 
             // label2
             // 
@@ -241,14 +208,17 @@
             this.grpMonth.Controls.Add(this.dtpMonth);
             this.grpMonth.Controls.Add(this.btnMonthGo);
             this.grpMonth.Controls.Add(this.label4);
-            this.grpMonth.Location = new System.Drawing.Point(0, 0);
+            this.grpMonth.Location = new System.Drawing.Point(12, 85);
             this.grpMonth.Name = "grpMonth";
             this.grpMonth.Size = new System.Drawing.Size(256, 153);
             this.grpMonth.TabIndex = 2;
             this.grpMonth.TabStop = false;
+            this.grpMonth.Visible = false;
             // 
             // dtpMonth
             // 
+            this.dtpMonth.CustomFormat = "MM-yyyy";
+            this.dtpMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpMonth.Location = new System.Drawing.Point(9, 55);
             this.dtpMonth.Name = "dtpMonth";
             this.dtpMonth.Size = new System.Drawing.Size(244, 20);
@@ -262,6 +232,7 @@
             this.btnMonthGo.TabIndex = 2;
             this.btnMonthGo.Text = "Fetch";
             this.btnMonthGo.UseVisualStyleBackColor = true;
+            this.btnMonthGo.Click += new System.EventHandler(this.btnMonthGo_Click);
             // 
             // label4
             // 
@@ -277,14 +248,17 @@
             this.grpYear.Controls.Add(this.dtpYear);
             this.grpYear.Controls.Add(this.btnYearGo);
             this.grpYear.Controls.Add(this.label6);
-            this.grpYear.Location = new System.Drawing.Point(0, 0);
+            this.grpYear.Location = new System.Drawing.Point(12, 85);
             this.grpYear.Name = "grpYear";
             this.grpYear.Size = new System.Drawing.Size(256, 153);
             this.grpYear.TabIndex = 3;
             this.grpYear.TabStop = false;
+            this.grpYear.Visible = false;
             // 
             // dtpYear
             // 
+            this.dtpYear.CustomFormat = "yyyy";
+            this.dtpYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpYear.Location = new System.Drawing.Point(9, 55);
             this.dtpYear.Name = "dtpYear";
             this.dtpYear.Size = new System.Drawing.Size(244, 20);
@@ -313,11 +287,12 @@
             this.grpSession.Controls.Add(this.txtSession);
             this.grpSession.Controls.Add(this.btnSessionGo);
             this.grpSession.Controls.Add(this.label3);
-            this.grpSession.Location = new System.Drawing.Point(0, 0);
+            this.grpSession.Location = new System.Drawing.Point(12, 85);
             this.grpSession.Name = "grpSession";
             this.grpSession.Size = new System.Drawing.Size(256, 153);
             this.grpSession.TabIndex = 4;
             this.grpSession.TabStop = false;
+            this.grpSession.Visible = false;
             // 
             // txtSession
             // 
@@ -410,26 +385,64 @@
             this.radioButton10.Text = "By Session ID";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // grpWebsite
             // 
-            this.groupBox2.Controls.Add(this.grpDate);
-            this.groupBox2.Controls.Add(this.grpMonth);
-            this.groupBox2.Controls.Add(this.grpSession);
-            this.groupBox2.Controls.Add(this.grpYear);
-            this.groupBox2.Location = new System.Drawing.Point(12, 85);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 153);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
+            this.grpWebsite.Controls.Add(this.txtWebsite);
+            this.grpWebsite.Controls.Add(this.btnWebsiteGo);
+            this.grpWebsite.Controls.Add(this.label5);
+            this.grpWebsite.Location = new System.Drawing.Point(12, 85);
+            this.grpWebsite.Name = "grpWebsite";
+            this.grpWebsite.Size = new System.Drawing.Size(256, 153);
+            this.grpWebsite.TabIndex = 4;
+            this.grpWebsite.TabStop = false;
+            this.grpWebsite.Visible = false;
+            // 
+            // txtWebsite
+            // 
+            this.txtWebsite.Location = new System.Drawing.Point(9, 49);
+            this.txtWebsite.Name = "txtWebsite";
+            this.txtWebsite.Size = new System.Drawing.Size(241, 20);
+            this.txtWebsite.TabIndex = 4;
+            // 
+            // btnWebsiteGo
+            // 
+            this.btnWebsiteGo.Location = new System.Drawing.Point(6, 113);
+            this.btnWebsiteGo.Name = "btnWebsiteGo";
+            this.btnWebsiteGo.Size = new System.Drawing.Size(244, 28);
+            this.btnWebsiteGo.TabIndex = 2;
+            this.btnWebsiteGo.Text = "Fetch";
+            this.btnWebsiteGo.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Website";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(274, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(748, 150);
+            this.dataGridView1.TabIndex = 7;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 461);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grpDate);
+            this.Controls.Add(this.grpMonth);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpWebsite);
+            this.Controls.Add(this.grpSession);
             this.Controls.Add(this.grpOptRep);
+            this.Controls.Add(this.grpYear);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form2";
@@ -439,8 +452,6 @@
             this.grpOptRep.PerformLayout();
             this.grpDate.ResumeLayout(false);
             this.grpDate.PerformLayout();
-            this.grpWebsite.ResumeLayout(false);
-            this.grpWebsite.PerformLayout();
             this.grpMonth.ResumeLayout(false);
             this.grpMonth.PerformLayout();
             this.grpYear.ResumeLayout(false);
@@ -449,7 +460,9 @@
             this.grpSession.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.grpWebsite.ResumeLayout(false);
+            this.grpWebsite.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -480,16 +493,16 @@
         private System.Windows.Forms.TextBox txtSession;
         private System.Windows.Forms.Button btnSessionGo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox grpWebsite;
-        private System.Windows.Forms.TextBox txtWebsite;
-        private System.Windows.Forms.Button btnWebsiteGo;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpWebsite;
+        private System.Windows.Forms.TextBox txtWebsite;
+        private System.Windows.Forms.Button btnWebsiteGo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -51,6 +51,7 @@ namespace SSLVortex
             }
         }
 
+        //
         public int GetLastID()
         {
             String querry = "select max(SessionID) as smax from SessionDB;";
@@ -83,13 +84,48 @@ namespace SSLVortex
             return 0;
         }
 
+
         public void runNonQuery(string query)
         {
             connect();
-            cmd = new SqlCommand(query,conn);
+            cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
             //Console.Write(query);
         }
-        
+
+        public SqlDataReader runQuery(string query)
+        {
+            try
+            {
+                cmd = new SqlCommand(query, conn);
+                connect();
+                return cmd.ExecuteReader();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+            return dr;
+        }
+        public void dataGridFill(string query, DataGridView dGV, string strTable)
+        {
+            try
+            {
+
+
+                connect();
+                DataSet ds = new DataSet();
+                ds.Clear();
+                cmd = new SqlCommand(query, conn);
+                SqlDataAdapter daStock = new SqlDataAdapter(cmd);
+                daStock.Fill(ds, strTable);
+                dGV.DataSource = ds.Tables[strTable];
+                disconnect();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+        }
     }
 }

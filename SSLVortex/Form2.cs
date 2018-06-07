@@ -12,21 +12,16 @@ namespace SSLVortex
 {
     public partial class Form2 : Form
     {
-        Object sender;
-
+        SQLDB conn = new SQLDB();
         public Form2()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {
-            foreach(GroupBox grp in groupBox2.Controls)
-            {
-
-            }
+        {           
+            rdoDate.Checked = true;
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -115,6 +110,23 @@ namespace SSLVortex
                 grpSession.Enabled = false;
                 grpSession.Visible = false;
             }
+        }
+
+        private void btnDateGo_Click(object sender, EventArgs e)
+        {
+            String strt = dtpSDate.Value.ToString("MM-dd-yyyy");
+            String end = dtpEDate.Value.AddDays(1).ToString("MM-dd-yyyy");
+
+            MessageBox.Show(strt + " " + end);
+            string query = "SELECT S1.SessionID,ReqLines,ReqHLines,ReqBody,ResLines,ResHLines,ResBody FROM SessionDB S1,StorageDB S2 WHERE S1.SessionID = S2.SessionID AND s1.StartTS >= '" + strt + "' AND s1.EndTS < '" + end + "';";
+
+            conn.dataGridFill(query, dataGridView1, "sessiondb,storagedb");         
+        }
+
+        private void btnMonthGo_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form1();
+            frm.ShowDialog();
         }
     }
 }

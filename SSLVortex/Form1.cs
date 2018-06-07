@@ -14,7 +14,7 @@ namespace SSLVortex
         public int sID = 0;
         private int LastInd = 0;
         private DateTime sTime = DateTime.Now;
-
+        
         public Form1()
         {
             InitializeComponent();
