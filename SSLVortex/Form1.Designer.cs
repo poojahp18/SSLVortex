@@ -52,6 +52,7 @@
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showInprocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showOutprocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.showOutprocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -220,19 +220,19 @@
             // tXTToolStripMenuItem
             // 
             this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
-            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.tXTToolStripMenuItem.Text = "TXT";
             // 
             // hMLToolStripMenuItem
             // 
             this.hMLToolStripMenuItem.Name = "hMLToolStripMenuItem";
-            this.hMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hMLToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.hMLToolStripMenuItem.Text = "XML";
             // 
             // hTMLToolStripMenuItem
             // 
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.hTMLToolStripMenuItem.Text = "HTML";
             // 
             // showInprocToolStripMenuItem
@@ -258,6 +258,13 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // showOutprocToolStripMenuItem
+            // 
+            this.showOutprocToolStripMenuItem.Name = "showOutprocToolStripMenuItem";
+            this.showOutprocToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showOutprocToolStripMenuItem.Text = "Show Outproc";
+            this.showOutprocToolStripMenuItem.Click += new System.EventHandler(this.showOutprocToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -372,13 +379,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(291, 448);
             this.textBox3.TabIndex = 0;
-            // 
-            // showOutprocToolStripMenuItem
-            // 
-            this.showOutprocToolStripMenuItem.Name = "showOutprocToolStripMenuItem";
-            this.showOutprocToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.showOutprocToolStripMenuItem.Text = "Show Outproc";
-            this.showOutprocToolStripMenuItem.Click += new System.EventHandler(this.showOutprocToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -53,7 +53,6 @@
             this.btnSessionGo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
@@ -63,6 +62,8 @@
             this.btnWebsiteGo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnClose2 = new System.Windows.Forms.Button();
             this.grpOptRep.SuspendLayout();
             this.grpDate.SuspendLayout();
             this.grpMonth.SuspendLayout();
@@ -71,6 +72,7 @@
             this.groupBox1.SuspendLayout();
             this.grpWebsite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpOptRep
@@ -159,6 +161,8 @@
             // 
             // dtpEDate
             // 
+            this.dtpEDate.CustomFormat = "dd-MM-yyyy";
+            this.dtpEDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEDate.Location = new System.Drawing.Point(6, 87);
             this.dtpEDate.Name = "dtpEDate";
             this.dtpEDate.Size = new System.Drawing.Size(244, 20);
@@ -217,7 +221,7 @@
             // 
             // dtpMonth
             // 
-            this.dtpMonth.CustomFormat = "MM-yyyy";
+            this.dtpMonth.CustomFormat = "MMMM-yyyy";
             this.dtpMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpMonth.Location = new System.Drawing.Point(9, 55);
             this.dtpMonth.Name = "dtpMonth";
@@ -272,6 +276,7 @@
             this.btnYearGo.TabIndex = 2;
             this.btnYearGo.Text = "Fetch";
             this.btnYearGo.UseVisualStyleBackColor = true;
+            this.btnYearGo.Click += new System.EventHandler(this.btnYearGo_Click);
             // 
             // label6
             // 
@@ -309,6 +314,7 @@
             this.btnSessionGo.TabIndex = 2;
             this.btnSessionGo.Text = "Fetch";
             this.btnSessionGo.UseVisualStyleBackColor = true;
+            this.btnSessionGo.Click += new System.EventHandler(this.btnSessionGo_Click);
             // 
             // label3
             // 
@@ -321,7 +327,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton6);
             this.groupBox1.Controls.Add(this.radioButton7);
             this.groupBox1.Controls.Add(this.radioButton8);
             this.groupBox1.Controls.Add(this.radioButton9);
@@ -332,16 +337,6 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select options to generate Report";
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 42);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(79, 17);
-            this.radioButton6.TabIndex = 4;
-            this.radioButton6.Text = "By Website";
-            this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // radioButton7
             // 
@@ -412,6 +407,7 @@
             this.btnWebsiteGo.TabIndex = 2;
             this.btnWebsiteGo.Text = "Fetch";
             this.btnWebsiteGo.UseVisualStyleBackColor = true;
+            this.btnWebsiteGo.Click += new System.EventHandler(this.btnWebsiteGo_Click);
             // 
             // label5
             // 
@@ -424,18 +420,47 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(274, 12);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(748, 150);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(934, 458);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Location = new System.Drawing.Point(274, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(940, 477);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // btnClose2
+            // 
+            this.btnClose2.BackColor = System.Drawing.Color.Gray;
+            this.btnClose2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClose2.Location = new System.Drawing.Point(6, 422);
+            this.btnClose2.Name = "btnClose2";
+            this.btnClose2.Size = new System.Drawing.Size(265, 48);
+            this.btnClose2.TabIndex = 9;
+            this.btnClose2.Text = "Close";
+            this.btnClose2.UseVisualStyleBackColor = false;
+            this.btnClose2.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 461);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1226, 501);
+            this.Controls.Add(this.btnClose2);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpDate);
             this.Controls.Add(this.grpMonth);
             this.Controls.Add(this.groupBox1);
@@ -443,7 +468,11 @@
             this.Controls.Add(this.grpSession);
             this.Controls.Add(this.grpOptRep);
             this.Controls.Add(this.grpYear);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Form2";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
@@ -463,6 +492,7 @@
             this.grpWebsite.ResumeLayout(false);
             this.grpWebsite.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -494,7 +524,6 @@
         private System.Windows.Forms.Button btnSessionGo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
@@ -504,5 +533,7 @@
         private System.Windows.Forms.Button btnWebsiteGo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnClose2;
     }
 }

@@ -30,3 +30,4 @@ SELECT S1.SessionID,ReqLines,ReqHLines,ReqBody,ResLines,ResHLines,ResBody
 FROM SessionDB S1,StorageDB S2 
 WHERE S1.SessionID = S2.SessionID
 	AND S1.SessionID = 15
+	
