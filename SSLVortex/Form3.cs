@@ -30,7 +30,7 @@ namespace SSLVortex
 
         private void txtReq_TextChanged(object sender, EventArgs e)
         {
-
+             
         }
     }
 }

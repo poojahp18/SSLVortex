@@ -6,7 +6,7 @@ using System.Net;
 
 namespace SSLVortex
 {
-    public class CacheEntry
+   public class CacheEntry
     {
         public CacheKey Key { get; set; }
         public DateTime? Expires { get; set; }
