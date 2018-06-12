@@ -183,7 +183,6 @@ namespace SSLVortex
 
         private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             if (activated)
             {
                 MessageBox.Show("Stop The Proxy First");
@@ -191,7 +190,6 @@ namespace SSLVortex
             }
             if (listView1.Items.Count > 0)
             {
-
                 StringBuilder strHTMLBuilder = new StringBuilder();
                 strHTMLBuilder.Append("<html >");
                 strHTMLBuilder.Append("<head>");
@@ -204,7 +202,6 @@ namespace SSLVortex
                 strHTMLBuilder.Append("<td>Request</td>");
                 strHTMLBuilder.Append("<td>Response</td>");
                 strHTMLBuilder.Append("</tr>");
-
                 for (int i = 0; i < Storage.getlen(); i++)
                 {
                     MessageBox.Show(i.ToString());
