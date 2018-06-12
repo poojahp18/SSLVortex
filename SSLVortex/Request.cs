@@ -19,7 +19,7 @@ namespace SSLVortex
             this.HeadLine = headLine;
             this.Headers = headers;
             this.Body = body;
-            //MessageBox.Show(headLine + headers + body);
+           
             this.ParseHeaders();
         }
         public Request ()

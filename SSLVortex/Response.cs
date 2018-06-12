@@ -11,12 +11,14 @@ namespace SSLVortex
         String HeadLine;
         String Headers;
         String Body;
+        // Function to initiate Responce header fields 
         public Response(String headLine, String headers, String body)
         {
             this.HeadLine = headLine;
             this.Headers = headers;
             this.Body = body;
         }
+        // Function to initiate Responce header fields to null
         public Response()
         {
             this.HeadLine = "";
