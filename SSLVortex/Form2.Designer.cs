@@ -1,6 +1,6 @@
 ﻿namespace SSLVortex
 {
-    partial class Form2
+    partial class frmDB
     {
         /// <summary>
         /// Required designer variable.
@@ -393,7 +393,7 @@
             this.grpDate.TabStop = false;
             this.grpDate.Visible = false;
             // 
-            // Form2
+            // frmDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -408,11 +408,11 @@
             this.Controls.Add(this.grpYear);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.Name = "Form2";
+            this.Name = "frmDB";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form2";
+            this.Text = "FETCH FROM DB";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.grpOptRep.ResumeLayout(false);

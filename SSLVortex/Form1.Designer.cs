@@ -1,6 +1,6 @@
 ﻿namespace SSLVortex
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -190,30 +190,30 @@
             // changeHostToolStripMenuItem
             // 
             this.changeHostToolStripMenuItem.Name = "changeHostToolStripMenuItem";
-            this.changeHostToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.changeHostToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.changeHostToolStripMenuItem.Text = "Exit";
             this.changeHostToolStripMenuItem.Click += new System.EventHandler(this.changeHostToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
             // 
             // changeHostToolStripMenuItem1
             // 
             this.changeHostToolStripMenuItem1.Name = "changeHostToolStripMenuItem1";
-            this.changeHostToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.changeHostToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.changeHostToolStripMenuItem1.Text = "Change Host";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
             // 
             // saveSessionToolStripMenuItem
             // 
             this.saveSessionToolStripMenuItem.Name = "saveSessionToolStripMenuItem";
-            this.saveSessionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveSessionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.saveSessionToolStripMenuItem.Text = "Save Session";
             this.saveSessionToolStripMenuItem.Click += new System.EventHandler(this.SaveSessionToolStripMenuItem_Click);
             // 
@@ -242,7 +242,7 @@
             this.hMLToolStripMenuItem,
             this.tXTToolStripMenuItem});
             this.showInprocToolStripMenuItem.Name = "showInprocToolStripMenuItem";
-            this.showInprocToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showInprocToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.showInprocToolStripMenuItem.Text = "Show Inproc";
             // 
             // fileToolStripMenuItem
@@ -262,7 +262,7 @@
             // showOutprocToolStripMenuItem
             // 
             this.showOutprocToolStripMenuItem.Name = "showOutprocToolStripMenuItem";
-            this.showOutprocToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showOutprocToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.showOutprocToolStripMenuItem.Text = "Show Outproc";
             this.showOutprocToolStripMenuItem.Click += new System.EventHandler(this.showOutprocToolStripMenuItem_Click);
             // 
@@ -380,7 +380,7 @@
             this.textBox3.Size = new System.Drawing.Size(291, 448);
             this.textBox3.TabIndex = 0;
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -397,7 +397,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VORTEX Decrypter";
             this.TransparencyKey = System.Drawing.Color.Yellow;

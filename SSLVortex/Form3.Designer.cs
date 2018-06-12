@@ -1,6 +1,6 @@
 ﻿namespace SSLVortex
 {
-    partial class Form3
+    partial class frmDesc
     {
         /// <summary>
         /// Required designer variable.
@@ -87,7 +87,7 @@
             this.txtRes.TabIndex = 6;
             this.txtRes.TabStop = false;
             // 
-            // Form3
+            // frmDesc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,9 +95,9 @@
             this.Controls.Add(this.grpRes);
             this.Controls.Add(this.grpReq);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form3";
+            this.Name = "frmDesc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "label";
+            this.Text = "Description";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.grpReq.ResumeLayout(false);
             this.grpReq.PerformLayout();

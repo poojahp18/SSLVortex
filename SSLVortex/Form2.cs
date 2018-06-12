@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace SSLVortex
 {
-    public partial class Form2 : Form
+    public partial class frmDB : Form
     {
         SQLDB conn = new SQLDB();
-        public Form2()
+        public frmDB()
         {
             InitializeComponent();
         }
@@ -203,7 +203,7 @@ namespace SSLVortex
             }
             else
             {
-                Form3 frm = new Form3();
+                frmDesc frm = new frmDesc();
 
                 frm.req = new Request(dataGridView1.SelectedRows[0].Cells[1].Value.ToString(), dataGridView1.SelectedRows[0].Cells[2].Value.ToString(), dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
                 frm.res = new Response(dataGridView1.SelectedRows[0].Cells[4].Value.ToString(), dataGridView1.SelectedRows[0].Cells[5].Value.ToString(), dataGridView1.SelectedRows[0].Cells[6].Value.ToString());

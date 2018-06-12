@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace SSLVortex
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         bool activated = false;
         public bool runninng = false;
@@ -15,7 +15,7 @@ namespace SSLVortex
         private int LastInd = 0;
         private DateTime sTime = DateTime.Now;
         
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
             ProxyServer.Server.DumpHeaders = true;
@@ -177,7 +177,7 @@ namespace SSLVortex
 
         private void showOutprocToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new Form2();
+            Form frm = new frmDB();
             frm.ShowDialog();
         }
     }

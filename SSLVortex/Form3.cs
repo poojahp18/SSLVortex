@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace SSLVortex
 {
-    public partial class Form3 : Form
+    public partial class frmDesc : Form
     {
         public Request req;
         public Response res;
 
 
-        public Form3()
+        public frmDesc()
         {
             InitializeComponent();
         }
