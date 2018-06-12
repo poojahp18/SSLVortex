@@ -139,7 +139,6 @@ namespace SSLVortex
         {
             if (runninng)
                 ProxyServer.Server.Stop();
-
             string query = "UPDATE SESSIONDB SET ENDTS = '" + DateTime.Now + "', SCOUNT = " + LastInd + " WHERE SESSIONID = " + sID + ";";
             Console.WriteLine(query);
             conn.runNonQuery(query);
@@ -169,9 +168,6 @@ namespace SSLVortex
                 }
                 query = query.TrimEnd(',');
                 LastInd = Storage.getlen();
-
-                //Console.WriteLine(query);
-
                 conn.runNonQuery(query);
             }
         }
