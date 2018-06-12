@@ -121,6 +121,7 @@ namespace SSLVortex
                 catch (Exception ex)
                 {
                     //To the log
+                    //File in Data Directory/logs
                 }
             }
         }
