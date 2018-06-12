@@ -190,50 +190,51 @@
             // changeHostToolStripMenuItem
             // 
             this.changeHostToolStripMenuItem.Name = "changeHostToolStripMenuItem";
-            this.changeHostToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.changeHostToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.changeHostToolStripMenuItem.Text = "Exit";
             this.changeHostToolStripMenuItem.Click += new System.EventHandler(this.changeHostToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // changeHostToolStripMenuItem1
             // 
             this.changeHostToolStripMenuItem1.Name = "changeHostToolStripMenuItem1";
-            this.changeHostToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.changeHostToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.changeHostToolStripMenuItem1.Text = "Change Host";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // saveSessionToolStripMenuItem
             // 
             this.saveSessionToolStripMenuItem.Name = "saveSessionToolStripMenuItem";
-            this.saveSessionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.saveSessionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveSessionToolStripMenuItem.Text = "Save Session";
             this.saveSessionToolStripMenuItem.Click += new System.EventHandler(this.SaveSessionToolStripMenuItem_Click);
             // 
             // tXTToolStripMenuItem
             // 
             this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
-            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tXTToolStripMenuItem.Text = "TXT";
             // 
             // hMLToolStripMenuItem
             // 
             this.hMLToolStripMenuItem.Name = "hMLToolStripMenuItem";
-            this.hMLToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.hMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hMLToolStripMenuItem.Text = "XML";
             // 
             // hTMLToolStripMenuItem
             // 
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hTMLToolStripMenuItem.Text = "HTML";
+            this.hTMLToolStripMenuItem.Click += new System.EventHandler(this.hTMLToolStripMenuItem_Click);
             // 
             // showInprocToolStripMenuItem
             // 
@@ -242,7 +243,7 @@
             this.hMLToolStripMenuItem,
             this.tXTToolStripMenuItem});
             this.showInprocToolStripMenuItem.Name = "showInprocToolStripMenuItem";
-            this.showInprocToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.showInprocToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.showInprocToolStripMenuItem.Text = "Show Inproc";
             // 
             // fileToolStripMenuItem
@@ -262,7 +263,7 @@
             // showOutprocToolStripMenuItem
             // 
             this.showOutprocToolStripMenuItem.Name = "showOutprocToolStripMenuItem";
-            this.showOutprocToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.showOutprocToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.showOutprocToolStripMenuItem.Text = "Show Outproc";
             this.showOutprocToolStripMenuItem.Click += new System.EventHandler(this.showOutprocToolStripMenuItem_Click);
             // 
