@@ -14,7 +14,7 @@ namespace SSLVortex
         public int sID = 0;
         private int LastInd = 0;
         private DateTime sTime = DateTime.Now;
-        
+
         public frmMain()
         {
             InitializeComponent();
@@ -121,6 +121,7 @@ namespace SSLVortex
                 catch (Exception ex)
                 {
                     //To the log
+                    //File in Data Directory/logs
                 }
             }
         }
@@ -138,7 +139,6 @@ namespace SSLVortex
         {
             if (runninng)
                 ProxyServer.Server.Stop();
-
             string query = "UPDATE SESSIONDB SET ENDTS = '" + DateTime.Now + "', SCOUNT = " + LastInd + " WHERE SESSIONID = " + sID + ";";
             Console.WriteLine(query);
             conn.runNonQuery(query);
@@ -168,9 +168,6 @@ namespace SSLVortex
                 }
                 query = query.TrimEnd(',');
                 LastInd = Storage.getlen();
-
-                //Console.WriteLine(query);
-
                 conn.runNonQuery(query);
             }
         }
@@ -179,6 +176,49 @@ namespace SSLVortex
         {
             Form frm = new frmDB();
             frm.ShowDialog();
+        }
+
+        private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (activated)
+            {
+                MessageBox.Show("Stop The Proxy First");
+                return;
+            }
+            if (listView1.Items.Count > 0)
+            {
+                StringBuilder strHTMLBuilder = new StringBuilder();
+                strHTMLBuilder.Append("<html >");
+                strHTMLBuilder.Append("<head>");
+                strHTMLBuilder.Append("</head>");
+                strHTMLBuilder.Append("<body>");
+                strHTMLBuilder.Append("<table border='1px' cellpadding='1' cellspacing='1' bgcolor='lightyellow' style='font-family:Garamond; font-size:smaller'>");
+
+                strHTMLBuilder.Append("<tr >");
+                strHTMLBuilder.Append("<td>HostName</td>");
+                strHTMLBuilder.Append("<td>Request</td>");
+                strHTMLBuilder.Append("<td>Response</td>");
+                strHTMLBuilder.Append("</tr>");
+                for (int i = 0; i < Storage.getlen(); i++)
+                {
+                    MessageBox.Show(i.ToString());
+                    strHTMLBuilder.Append("<tr >");
+                    strHTMLBuilder.Append("<td>" + Storage.getHosts()[i] + "</td>");
+                    strHTMLBuilder.Append("<td>" + Storage.getrequest(i).ToString() + "</td>").Replace("\r\n", "<br />");
+                    strHTMLBuilder.Append("<td>" + Storage.getresponse(i).ToString() + "</td>").Replace("\r\n", "<br />");
+                    strHTMLBuilder.Append("</tr>");
+                }
+                strHTMLBuilder.Append("</table>");
+                strHTMLBuilder.Append("</body>");
+                strHTMLBuilder.Append("</html>");
+
+                string Htmltext = strHTMLBuilder.ToString();
+                MessageBox.Show(Htmltext);
+            }
+            else
+            {
+                MessageBox.Show("Error : Cant Create Report With 0 Entries.", "NO ELEMENTS");
+            }
         }
     }
 }
